@@ -219,6 +219,9 @@ pub mod value;
 #[doc(hidden)]
 pub use value::Value;
 
+mod runner;
+pub use runner::Runner;
+
 pub fn trace_from_str<S>(str: &str) -> Result<Trace<S>, Error>
 where
     S: for<'de> Deserialize<'de>,
